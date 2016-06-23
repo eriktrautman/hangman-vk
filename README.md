@@ -1,5 +1,5 @@
 CLOUD 9: https://c9.io/kcode/hangman
-
+Run in the terminal -->   ruby hangman.rb -o $IP -p $PORT
 
 
 To dos:
