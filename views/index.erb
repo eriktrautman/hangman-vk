@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+    <script src="animate.js" type="text/javascript"></script>
+  </head>
+  
+  
+  
+  <body>
+    
+    
+<h1>Hangman</h1>
+<h2 id="h21">You're going to love it,</h2>
+
+<h2 id="h22">or your money back!</h2>
+<div class="container">
+<div class="top-bar"></div>
+
+<div class="noose-long"></div>
+<div class="noose-fat"></div>
+  
+<div class="head"></div>
+  
+<div class="face-1">
+<div class="eye-1" id="left-eye-1"></div>  
+<div class="eye-1" id="right-eye-1"></div>    
+<div class="mouth-1" id="mouth-1"></div>   
+<div class="mouth-1" id="mouth-1b"></div> 
+</div> <!-- face 1 end -->  
+  
+<div class="face-2">
+<div class="eye-2" id="left-eye-2">X</div>  
+<div class="eye-2" id="right-eye-2">X</div>    
+<div class="mouth-2" id="mouth-2"></div> 
+</div> <!-- face 1 end -->    
+
+<div class="left-arm"></div>
+<div class="body"></div>
+<div class="right-arm"></div>
+  
+  
+
+<div class="left-leg"></div>
+<div class="right-leg"></div>
+<div class="post"></div>
+</div>
+
+
+
+
+
+
+<div class="buttons">
+  
+  <%= message %>
+<br>
+  
+<div class="start-section" style="display:<%= start_section %>">
+  
+  
+  <br>
+
+<h4>How many letters would you like for your word?</h4>
+<form>
+<input type="text" id="start-new" name="start-new" />  
+<input type="submit" value="Select Difficulty" />
+</form>
+</div>  
+  
+<div class="guess-section" style="display:<%= guess_section %>">
+  
+    
+  <br>
+  Guessed Wrong: <%= guessed_wrong.to_s %>
+  <br>
+<form>
+
+<input type="text" id="guess-box" name="guess-box" />  
+<input id="letter-check" type="submit" value="Guess!" />
+
+<br>
+
+
+</div>
+
+
+
+
+
+<script>animator(<%= animation_num %>)</script>
+
+</form>
+
+</div>
+
+<div class="word-spaces-box"><%= word_display %></div>
+
+
+
+
+
+
+
+
+  </body>
+</html>
